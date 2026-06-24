@@ -1,0 +1,143 @@
+.product-card {
+  background-color: #1E293B;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 100);
+  border-color: #5B21B6;
+}
+
+.card-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;  
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #111827;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.delete-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: 1px solid red;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+  background-color: rgb(235, 11, 11);
+  color: white;
+  box-shadow: 0 0 5px red;
+  border-color: rgb(235, 11, 11);
+}
+
+.update-button {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: orange;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: 1px solid orange;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.update-button:hover {
+  background-color: rgb(235, 119, 11);
+  color: white;
+  box-shadow: 0 0 5px orange;
+  border-color: rgb(235, 119, 11);
+  transform: translateX(-50%);
+}
+
+.update-button:active {
+  transform: translateX(-50%) scale(0.95); 
+}
+
+.card-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-title {
+  color: #F9FAFB;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-price {
+  color: #7C3AED;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid #7C3AED;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #7C3AED;
+}
+

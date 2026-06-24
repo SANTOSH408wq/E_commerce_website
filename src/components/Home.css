@@ -1,0 +1,22 @@
+.greeting {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  background-color: #7C3AED;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  max-height: 100px;
+  max-width: 100%;
+}
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+.multiple-cards {
+    display: flex;
+    max-width: 50%;
+    padding: 0px;
+}

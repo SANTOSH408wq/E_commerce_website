@@ -1,0 +1,32 @@
+.product-card-wide {
+    background-color: #1E293B; 
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #334155;
+    max-width: 100%;
+    font-weight: 600;
+}
+.product-card-wide p {
+    font-size: 14px;
+}
+.product-card-wide:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 100);
+  border-color: #5B21B6; 
+}
+.card-image-container-wide {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #FFFFFF; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card-wide:hover .card-image {
+    transform: scale(1.05);
+  }

@@ -1,0 +1,94 @@
+/* Centers the entire form on the page */
+.add-product-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 80vh; 
+}
+
+/* Main container styling matching your product cards */
+.add-product-container {
+    background-color: #1E293B;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.add-product-container h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 15px;
+    color: #F9FAFB;
+    text-align: center;
+}
+
+/* Stacks the label and input cleanly */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #94A3B8; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Modern, dark-themed inputs */
+.input-group input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    background-color: #0F172A;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+/* The vibrant purple focus effect */
+.input-group input:focus {
+    border-color: #7C3AED;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+}
+
+.action-button {
+    display: flex;
+    justify-content: center; /* Centers the button */
+    margin-top: 30px;
+}
+
+.submit-btn {
+    background-color: #7C3AED;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%; /* Makes the button fill the form */
+    transition: all 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #6D28D9;
+    box-shadow: 0 0 15px rgba(109, 40, 217, 0.4);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0) scale(0.98);
+}
