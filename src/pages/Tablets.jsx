@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { supabase } from '../supabase'
 import { ProductCard } from '../components/ProductCard'
 import './Smartphones.css'
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 export function Tablets() {
   const [tablets,setTablets] = useState([])
   useEffect(()=> {
@@ -13,6 +15,7 @@ export function Tablets() {
   }
   return (
     <>
+      <Header />
       <div className="products-container">
       {tablets.map((tablet) => (
           <div key={tablet.id} style={{ padding: '1%', maxWidth: '23%' }}>
@@ -27,6 +30,7 @@ export function Tablets() {
           </div>
         ))}
       </div>
+      <Footer />
     </>
   )
 }

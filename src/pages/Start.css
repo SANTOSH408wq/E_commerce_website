@@ -1,0 +1,45 @@
+.start-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.start-card {
+
+    padding: 3em;
+    width: 100%;
+    border-radius: 8px;
+    max-width: 960px;
+}
+
+.btn-row {
+    margin-top: 50px;
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    margin-left: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #7C3AED;
+    border: 1px solid #5B21B6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #6D28D9;
+    border-color: #5B21B6;
+    box-shadow: 0 0 10px #6D28D9;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}

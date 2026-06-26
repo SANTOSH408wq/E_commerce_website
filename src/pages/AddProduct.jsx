@@ -1,6 +1,8 @@
 import "./AddProduct.css";
 import { useState } from 'react';
 import { supabase } from '../supabase.js'
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 export function AddProduct() {
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
@@ -15,7 +17,9 @@ export function AddProduct() {
         setCategory("");
     }
     return (
-        <div className="add-product-wrapper">
+        <>
+            <Header />
+            <div className="add-product-wrapper">
             <div className='add-product-container'>
                 <div className="input-group">
                     <label>Title</label>
@@ -38,6 +42,8 @@ export function AddProduct() {
                     <button className="submit-btn" onClick={()=>addProductData()}>Submit</button>
                 </div>
             </div>
-        </div>
+            </div>
+            <Footer />
+        </>
     )
 }
