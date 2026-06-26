@@ -6,11 +6,14 @@ export function Signup() {
     const navigate = useNavigate()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [loading,setLoading] = useState(false)
 
     async function signUpUser() {
+        setLoading(true)
         const { error } = await supabase.auth.signUp({ email, password })
         if (error) {
             alert(error.message)
+            setLoading(false)
         } else {
             navigate('/')
         }
@@ -22,7 +25,7 @@ export function Signup() {
                     <h1 style={{ fontWeight: '700', fontSize: '45px' }}>Sign up</h1>
                     <input type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)}></input>
                     <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}></input>
-                    <button onClick={signUpUser} className="btn">Sign up</button>
+                    <button onClick={signUpUser} disabled={loading}>{loading ? 'Creating User…' : 'Sign up'}</button>
                     <p>have an account? <Link to="/Login">Log in</Link></p>
                 </div>
             </div>

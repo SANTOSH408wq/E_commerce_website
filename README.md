@@ -1,3 +1,9 @@
+Start Page/Welcome Page:
+![alt text](./website_images/startPage.png)
+Login Page:
+![alt text](./website_images/loginPage.png)
+Sign up Page:
+![alt text](./website_images/signupPage.png)
 Home Page:
 ![alt HomePage image](./website_images/homePage.png)
 Smartphones Section:
