@@ -8,6 +8,7 @@
     border: 2px solid #334155;
     max-width: 100%;
     font-weight: 600;
+    cursor: pointer;
 }
 .product-card-wide p {
     font-size: 14px;

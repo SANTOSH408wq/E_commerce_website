@@ -1,6 +1,3 @@
-import './pages/AddProduct.css'
-import { useState } from "react"
-import { Link } from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 import { Protected } from './Protected'
 import { Start } from './pages/Start'
@@ -13,6 +10,7 @@ import { AddProduct } from './pages/AddProduct'
 import { Cart } from './pages/Cart'
 import { Login } from './pages/Login'
 import { Signup } from './pages/Signup'
+import { ProductPage } from './pages/ProductPage'
 function App() {
   return (
     <>
@@ -26,6 +24,7 @@ function App() {
           <Route path="/EarBuds" element={<Protected><EarBuds /></Protected>} />
           <Route path="/AddProduct" element={<Protected><AddProduct /></Protected>} />
           <Route path="/Cart" element={<Protected><Cart /></Protected>} />
+          <Route path="/product/:id" element={<Protected><ProductPage /></Protected>} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
         </Routes>

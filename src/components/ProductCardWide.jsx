@@ -3,7 +3,10 @@ import './ProductCard.css'
 import { supabase } from '../supabase'
 import { useState } from 'react'
 import { UpdateProductPopUp } from './UpdateProductPopUp'
+import { useNavigate } from 'react-router-dom'
+
 export function ProductCardWide({ id, title, price, imageUrl, category, onProductChange }) {
+  const navigate = useNavigate();
   const [popUpOpen,setPopUpOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
     
@@ -20,19 +23,19 @@ export function ProductCardWide({ id, title, price, imageUrl, category, onProduc
   }
   return (
     <>
-    <div className="product-card-wide">
+    <div className="product-card-wide" onClick={() => navigate(`/product/${id}`, { state: { product: { id, title, price, imageUrl, category } } })}>
       <div className="card-image-container-wide">
         <img src={imageUrl} alt={title} className="card-image" />
         <span className="card-badge">{category}</span>
-        <button className="update-button" onClick={()=>updateProduct({ id, title, price, imageUrl, category })}>Update</button>
-        <button className="delete-button" onClick={deleteProduct}>Delete</button>
+        <button className="update-button" onClick={(e)=>{ e.stopPropagation(); updateProduct({ id, title, price, imageUrl, category }) }}>Update</button>
+        <button className="delete-button" onClick={(e)=>{ e.stopPropagation(); deleteProduct() }}>Delete</button>
       </div>
       
       <div className="card-info">
         <h3 className="card-title">{title}</h3>
         <p className="card-price">₹{price}</p>
         
-        <button className="add-to-cart-btn" onClick={addToCart}>
+        <button className="add-to-cart-btn" onClick={(e)=>{ e.stopPropagation(); addToCart() }}>
           Add to Cart
         </button>
       </div>

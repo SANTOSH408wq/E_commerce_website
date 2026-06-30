@@ -134,6 +134,7 @@ header {
   align-self: center;
   align-content: center;
   width: 100%;
+  margin-top: auto;
 }
 
 .footerOfWebsite p {
@@ -163,6 +164,8 @@ body {
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .cart-button {
